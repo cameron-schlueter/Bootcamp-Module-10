@@ -1,4 +1,6 @@
+const fs = require ('fs')
 const inquirer = require('inquirer');
+const handlebars = require('handlebars');
 
 // Define an array of questions for the user
 const questions = [
@@ -28,3 +30,34 @@ const questions = [
 inquirer.prompt(questions).then((answers) => {
   console.log(answers);
 });
+manager
+  const teamMembers = [
+    {
+      name: managerAnswers.managerName,
+      id: managerAnswers.managerId,
+      email: managerAnswers.managerEmail,
+      officeNumber: managerAnswers.managerOfficeNumber,
+    },
+  ];
+
+  inquirer
+  .prompt([
+    {
+      type: 'list',
+      name: 'memberType',
+      message: 'What type of team member would you like to add?',
+      choices: ['Engineer', 'Intern', 'None'],
+    },
+  ])
+  .then((memberTypeAnswer) => {
+    // Depending on the member type, prompt the user for additional information
+    switch (memberTypeAnswer.memberType) {
+      case 'Engineer':
+        inquirer
+          .prompt([
+            {
+              type: 'input',
+              name: 'engineerName',
+              message: "What is the engineer's name?",
+            },
+            {
