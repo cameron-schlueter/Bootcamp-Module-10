@@ -1,6 +1,16 @@
 const fs = require ('fs')
 const inquirer = require('inquirer');
-const handlebars = require('handlebars');
+const Handlebars = require('handlebars');
+const readline = require('readline')
+
+const cssPath = './style.css';
+const htmlPath = './index.html';
+
+fs.writeFileSync('./index.html', html);
+fs.writeFileSync('./style.css', css);
+
+const dataPath = 'package.json'
+let contacts = [];
 
 // Define an array of questions for the user
 const questions = [
@@ -60,4 +70,5 @@ manager
               name: 'engineerName',
               message: "What is the engineer's name?",
             },
-            {
+          ])}
+        })
