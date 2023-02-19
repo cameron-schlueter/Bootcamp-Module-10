@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Profile</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+      </head>      
+  </head>
+  <body>
+    <h1>Team Profile</h1>
+    <ul>
+      <p>Team Members</p>
+      <li>
+        <h2>{{this.name}}</h2>
+        <p>ID: {{this.id}}</p>
+        <p>Email: <a href="mailto:{{this.email}}">{{this.email}}</a></p>
+        {{#if this.officeNumber}}
+        <p>Office Number: {{this.officeNumber}}</p>
+        {{/if}}
+        {{#if this.github}}
+        <p>Github: <a href="https://github.com/{{this.github}}">{{this.github}}</a></p>
+        {{/if}}
+        {{#if this.school}}
+        <p>School: {{this.school}}</p>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </body>
+</html>
