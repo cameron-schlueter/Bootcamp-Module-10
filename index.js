@@ -24,7 +24,7 @@ const questions = [
   },
 ];
 
-// Prompt the user for input using the questions array
+// Prompts user
 inquirer.prompt(questions).then((answers) => {
   console.log(answers);
 });
