@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
-
+const Manager = require('./lib/Manager')
+const team = []
 // Define an array of questions for the user
 const questions = [
   {
@@ -27,4 +28,7 @@ const questions = [
 // Prompts user
 inquirer.prompt(questions).then((answers) => {
   console.log(answers);
+  const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber)
+  team.push
 });
+//fs write file forloop card per
